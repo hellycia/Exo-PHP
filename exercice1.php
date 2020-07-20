@@ -3,8 +3,7 @@ class exercice1
 {
 
     function today(){
-        echo('Aujourdjhui nous sommes le ' . date('l jS \of F Y'));
-        echo(' et il est ' . date('h:i:s'));
+        echo('Aujourdjhui nous sommes le ' . date('l jS \of F Y h:i:s'));
     }
 
     function friday(){
