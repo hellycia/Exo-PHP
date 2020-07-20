@@ -7,18 +7,21 @@ function friday($date){
         printf('Cest parti pour une nouvelle semaine');
     }
     if($date == "Tuesday") {
-        printf('Cest parti pour une nouvelle semaine');
+        printf('Aujourd hui j ai piscine');
     }
     if($date == "Wednesday") {
-        printf('Cest parti pour une nouvelle semaine');
+        printf('Jour des enfants');
     }
     if($date == "Thursday") {
-        printf('Cest parti pour une nouvelle semaine');
+        printf('On sort boire un verre?');
     }
     if($date == "Friday") {
-        printf('Cest parti pour une nouvelle semaine');
+        printf('Presque en weekend!');
     }
     if($date == "Saturday") {
-        printf('Cest parti pour une nouvelle semaine');
+        printf('Qui fait du PHP le weekend?');
+    }
+    if($date == "Sunday") {
+        printf('Pas dispo');
     }
 }
