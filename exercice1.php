@@ -5,23 +5,17 @@ function friday($date){
     $date = date("l", $date);
     if($date == "Monday") {
         printf('Cest parti pour une nouvelle semaine');
-    }
-    if($date == "Tuesday") {
+    }elseif($date == "Tuesday") {
         printf('Aujourd hui j ai piscine');
-    }
-    if($date == "Wednesday") {
+    }elseif($date == "Wednesday") {
         printf('Jour des enfants');
-    }
-    if($date == "Thursday") {
+    }elseif($date == "Thursday") {
         printf('On sort boire un verre?');
-    }
-    if($date == "Friday") {
+    }elseif($date == "Friday") {
         printf('Presque en weekend!');
-    }
-    if($date == "Saturday") {
+    }elseif($date == "Saturday") {
         printf('Qui fait du PHP le weekend?');
-    }
-    if($date == "Sunday") {
+    }elseif($date == "Sunday") {
         printf('Pas dispo');
     }
 }
