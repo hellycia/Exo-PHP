@@ -1,37 +1,41 @@
 <?php
 
-class exercice4
-{
-    $nombre1 = readline("Le premier nombre?");
-    $nombre2 = readline("Le deuxième nombre?");
+    $nombre1 =  readline("Le premier nombre? ");
+    $nombre2 = readline("Le deuxième nombre? ");
 
-    if(is_int($nombre1) && is_int($nombre2)){
-        return true;
-    }else {
-        exit("Vous devez rentrer un entier");
+    $nombre1 = intval($nombre1);
+    $nombre2 = intval($nombre2);
+
+    //$nombre1 = intval(readline("Le premier nombre? "));
+
+    if($nombre1 === 0 || $nombre2 === 0){
+        exit("Vous devez rentrer un entier positif");
     }
 
-    echo($nombre1 . $nombre2);
+    $resultats = [];
+    $resultats['+'] = additionner($nombre1, $nombre2);
+    $resultats['*'] = multiplier($nombre1, $nombre2);
+    $resultats['/'] = diviser($nombre1, $nombre2);
+    $resultats['%'] = modulo($nombre1, $nombre2);
 
-
-    function additionner($nombre1, $nombre2){
-        $addition = $nombre1 + $nombre2;
-        echo($addition);
+    foreach($resultats as $index => $resultat){
+        echo($nombre1 . $index . $nombre2 . '=' . $resultat . "\n");
     }
 
-    function multiplier($nombre1, $nombre2){
-        $multiplier = $nombre1 * $nombre2;
-        echo($multiplier);
+
+    function additionner(int $a, int $b) : int {
+        return $a + $b;
     }
 
-    function diviser($nombre1, $nombre2){
-        $diviser = $nombre1 / $nombre2;
-        echo($diviser);
+    function multiplier(int $a, int $b) : int {
+        return $a * $b;
     }
 
-    function modulo($nombre1, $nombre2){
-        $modulo = $nombre1 % $nombre2;
-        echo($modulo);
+    function diviser(int $a, int $b) : float {
+        return $a / $b;
     }
-}
+
+    function modulo(int $a, int $b) : int {
+        return $a % $b;
+    }
 ?>
