@@ -8,8 +8,13 @@ $nombre2 = intval($nombre2);
 
 //$nombre1 = intval(readline("Le premier nombre? "));
 
-if($nombre1 === 0 || $nombre2 === 0){
-    exit("Vous devez rentrer un entier positif");
+if(
+    $nombre1 <= 10 ||
+    $nombre1 >= 100 ||
+    $nombre2 > $nombre1 ||
+    $nombre2 === 0
+) {
+    exit("Saisie invalide");
 }
 
 $resultats = [];
