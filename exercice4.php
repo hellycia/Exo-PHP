@@ -1,16 +1,9 @@
 <?php
-    //$nombre1 = intval(readline("Le premier nombre? "));
-
-$nombre1 =  readline("Le premier nombre? ");
-$nombre2 = readline("Le deuxième nombre? ");
-
-$nombre1 = intval($nombre1);
-$nombre2 = intval($nombre2);
-
 //$nombre1 = intval(readline("Le premier nombre? "));
+$i = 0;
 
 do {
-    $nombre1 =  readline("Le premier nombre? ");
+    $nombre1 = readline("Le premier nombre? ");
     $nombre2 = readline("Le deuxième nombre? ");
     $nombre1 = intval($nombre1);
     $nombre2 = intval($nombre2);
@@ -20,6 +13,10 @@ do {
     if($truc) {
         echo("Le chiffre nest pas bon, ");
     }
+    if($i >= 10){
+        exit('Vous avez fait trop d erreur');
+    }
+    $i++;
 } while($truc);
 
 $resultats = [];
