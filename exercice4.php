@@ -8,16 +8,16 @@ do {
     $nombre1 = intval($nombre1);
     $nombre2 = intval($nombre2);
 
-    $truc = (condition($nombre1, $nombre2) == true);
+    $saisieInvalide = (condition($nombre1, $nombre2) == true);
 
-    if($truc) {
+    if($saisieInvalide) {
         echo("Le chiffre nest pas bon, ");
     }
     if($i >= 10){
         exit('Vous avez fait trop d erreur');
     }
     $i++;
-} while($truc);
+} while($saisieInvalide);
 
 $resultats = [];
 $resultats['additionner'] = additionner($nombre1, $nombre2);
