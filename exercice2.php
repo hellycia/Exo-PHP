@@ -1,6 +1,7 @@
 <?php
 
 $nbDeChien = readline("Combien avez-vous de chien?");
+
 // $chiens = [
 //     0=>[
 //         'nom'=>'Dogo1',
@@ -13,8 +14,6 @@ $nbDeChien = readline("Combien avez-vous de chien?");
 // ];
 
 $chiens = [];
-
-
 
 for($i=0; $i < $nbDeChien; $i++){
     $nom = readline("Quel est son nom?");
@@ -30,3 +29,4 @@ if($nbDeChien == 0){
 foreach($chiens as $chien){
     echo('Le nom est ' . $chien['nom'] . ' et sa race est ' . $chien['race']);
 }
+?>
